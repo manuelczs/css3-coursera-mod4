@@ -32,26 +32,49 @@ body {
 }
 
 header {
-  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/0.jpg');
+  background-size: cover;
+  border-radius: 6px;
 }
 
 nav {
-  background-color: lightgray;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
   height: 240px;
   margin: 0 auto;
 }
 
+nav ul li {
+  background-color: black;
+  color: white;
+  padding: .4rem;
+  min-width: 20px;
+  border-radius: 6px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
 nav img {
-  width: 20%;
+  width: 22%;
+  border-radius: 6px;
+  border: 2px solid black
 }
 
 h1 {
+  width: 100%;
   padding: 1.6rem 0rem;
   font-size: 2rem;
+  color: white !important;
+  background-color: black;
 }
 
 main {
@@ -63,14 +86,20 @@ main {
   padding: 1rem;
 }
 
+.main-tag-img {
+  min-height: 600px;
+  background-image: url('../images/1.jpg');
+}
+
 .main-tag-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .main-tag-grid img {
   width: 100%;
+  border-radius: 6px;
 }
 
 .main-tag-flex {
@@ -81,11 +110,22 @@ main {
 }
 
 .main-tag-flex img {
-  width: 18%;
+  border-radius: 6px;
+  width: 30%;
+}
+
+.welcome-text {
+  padding-bottom: 1rem;
 }
 
 footer {
-  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 160px;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
 }
 
 ul {
@@ -112,4 +152,15 @@ p {
 #skip-text {
   background-color: aqua;
   color: blue;
+}
+
+@media (min-width: 768px) {
+  .main-tag-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .main-tag-flex {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
 }
