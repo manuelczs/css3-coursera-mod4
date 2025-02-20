@@ -157,7 +157,11 @@ p {
 
 #skip-text {
   background-color: aqua;
-  color: blue;
+  color: transparent;
+}
+
+#skip-text:focus {
+  color: black;
 }
 
 @media (min-width: 768px) {
